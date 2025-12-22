@@ -1,0 +1,35 @@
+{
+    "items": [
+        {
+            "id": 1,
+            "title": "Brownie de batata doce sem açúcar",
+            "image": "https://png.pngtree.com/png-clipart/20210724/ourmid/pngtree-brownie-pieces-floating-png-image_3720613.jpg",
+            "description": "Brownie feito com batata doce, pasta de amendoim e outros ingredientes naturais. Uma opção saudável que possui menos calorias para alegrar o seu dia sem comproter o sabor e a dieta.",
+            "categories": [
+                "saudável",
+                "zero açúcar"
+            ]
+        },
+        {
+            "id": 2,
+            "title": "Palha Italiana",
+            "image": "https://png.pngtree.com/png-clipart/20210724/ourmid/pngtree-brownie-pieces-floating-png-image_3720613.jpg",
+            "description": "https://static.vecteezy.com/system/resources/previews/041/486/700/non_2x/palha-italiana-food-png.png",
+            "categories": [
+                "com açúcar",
+                "calórico"
+            ]
+        },
+        {
+            "id": 3,
+            "title": "Trufa de tâmara com cacau",
+            "image": "https://img.freepik.com/psd-premium/doce-de-trufa-de-chocolate-isolado-em-fundo-transparente-png-psd_888962-855.jpg",
+            "description": "Trufa sem açúcar, adoçada com a própria tâmara, e finalizada com cacau em pó.",
+            "categories": [
+                "saudável",
+                "zero açúcar",
+                "trufa"
+            ]
+        }
+    ]
+}
