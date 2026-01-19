@@ -5,25 +5,26 @@ import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
 import { AlertDelete } from "@/components/AlertDelete";
 import { DialogEdit } from "@/components/DialogEdit";
+import { itemRepository } from "@/repositories/item/json-item-repository";
 
-export const CardItem = () => {
+export const CardItem = async () => {
+    const items = await itemRepository.findAll();
+
     return (
         <div>
             <Card className="w-64">
                 <CardHeader>
-                    <h1 className="text-center">Brownie de batata doce</h1>
-                    <Image className="bg-cover" src="/images/brownie_teste.png" alt="Item 1" width={300} height={300} />
+                    <h1 className="text-center">{items[0].title}</h1>
+                    <Image className="bg-cover" src="/images/brownie_teste.png" alt="Item 1" width={300} height={300} /> 
+                    {/* naotem como pegar link image[0] pois pertence ao site */}
                     <Separator className="bg-blue-500" />
                 </CardHeader>
                 <CardContent className="flex flex-col justify-center items-center gap-2">
-                    <p className="text-justify">Um brownie de batata doce feito sem açúcar, para você que busca um doce e saudável sem sair da dieta, e além disso com um preço que cabe no seu bolso.</p>
+                    <p className="text-justify">{items[0].description}</p>
                     <div className="info1 space-x-2">
-                        <Badge className="">Sem açúcar</Badge>
-                        <Badge className="">Saudável</Badge>
-                    </div>
-                    <div className="info2 space-x-2 sm:block hidden">
-                        <Badge className="">Cabe na dieta</Badge>
-                        <Badge className="">Cabe no bolso</Badge>
+                        {items[0].categories.map((category, index) => (
+                            <Badge key={index} className="">{category}</Badge>
+                        ))}
                     </div>
                     <div className="edits flex space-x-4 mt-2">
                         <AlertDelete />
